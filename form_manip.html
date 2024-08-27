@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive design for different screen sizes -->
+    <title>Form Manipulation</title> <!-- Title of the webpage -->
+    <script src="form_manip.js" defer></script> <!-- Link to the external JavaScript file for form handling -->
+  </head>
+  <body>
+    <!-- Form for user input -->
+    <form id="form" onsubmit="handleSubmit(event)">
+      <!-- Label and input for the user's name -->
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        placeholder="Enter Name"
+      />
+
+      <!-- Label and input for the user's email -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        placeholder="Enter Email"
+      />
+
+      <!-- Label and textarea for the user's message -->
+      <label for="message">Message:</label>
+      <textarea
+        name="message"
+        id="message"
+        required
+        placeholder="Enter Message"
+      ></textarea>
+
+      <!-- Submit button to send the form data -->
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
