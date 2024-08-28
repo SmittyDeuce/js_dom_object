@@ -5,24 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Styling with JavaScript</title>
     <script src="styling.js" defer></script>
+    <!-- Link to the external JavaScript file -->
 
     <style>
+      /* General styling for the body */
+      body {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Arrange children in a column */
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
+        min-height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove default margin */
+      }
 
-        .apples{
-         color: magenta; /* New color for the box */
+      /* Container for all div elements */
+      #div-container {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Arrange children in a column */
+        align-items: center; /* Center children horizontally */
+        gap: 20px; /* Space between items */
+      }
+
+      /* Dark mode styling */
+      .darkmode {
+        background-color: black; /* Dark background color */
+        color: white; /* Light text color */
+      }
+
+      /* Styling for the box */
+      .box {
+        color: red; /* Text color */
+      }
+
+      /* Styling for the button */
+      .button {
+        transform: scale(2.1); /* Enlarge the button */
+        transition: 0.1s ease; /* Smooth transition for scale */
+      }
+
+      /* Styling for the header */
+      #header {
+        background-color: red; /* Initial background color */
+        transition: background-color 0.5s ease; /* Smooth transition for background color */
+        padding: 10px; /* Padding around the text */
+        margin: 20px; /* Space around the header */
       }
     </style>
-
-
   </head>
-  <body>
-    <h1 id="header">Dynamic Styling Example</h1>
-    <p id="paragraph">This is a paragraph that will be styled dynamically.</p>
+  <body id="main-container">
+    <div id="div-container">
+      <!-- Header with dynamic background color change on mouseover -->
+      <h1 id="header" onmouseover="changeBackgroundColor()">
+        Dynamic Background
+      </h1>
 
-    <img id="rick" src="images/memebetter.com-20240827200314.jpg" onmouseover="changeGif()" onmouseleave="backToMeme()" 
-    alt="Rick Astley never gonna give up">
+      <!-- Label and radio button for dark mode toggle -->
+      <label for="darkmode">Dark Mode</label>
+      <input onclick="darkMode()" type="radio" name="darkmode" id="darkmode" />
 
-    <button id="button" onclick="changeStyle()">Change Style</button>
+      <!-- Image that changes source on mouseover and mouseleave -->
+      <img
+        id="rick"
+        src="images/memebetter.com-20240827200314.jpg"
+        onmouseover="changeGif()"
+        onmouseleave="backToMeme()"
+        alt="Rick Astley never gonna give up"
+      />
+
+      <!-- Button to change style -->
+      <button id="button" onclick="changeStyle()">Change Style</button>
+    </div>
+
+    <!-- Box element that changes color on click -->
     <div id="box" onclick="changeColor()">Click me to change color</div>
   </body>
 </html>
