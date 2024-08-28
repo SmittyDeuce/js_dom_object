@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling with JavaScript</title>
+    <script src="styling.js" defer></script>
+
+    <style>
+
+        .apples{
+         color: magenta; /* New color for the box */
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <h1 id="header">Dynamic Styling Example</h1>
+    <p id="paragraph">This is a paragraph that will be styled dynamically.</p>
+
+    <img id="rick" src="images/memebetter.com-20240827200314.jpg" onmouseover="changeGif()" onmouseleave="backToMeme()" 
+    alt="Rick Astley never gonna give up">
+
+    <button id="button" onclick="changeStyle()">Change Style</button>
+    <div id="box" onclick="changeColor()">Click me to change color</div>
+  </body>
+</html>
